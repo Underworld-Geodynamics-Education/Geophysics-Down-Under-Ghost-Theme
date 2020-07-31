@@ -1,7 +1,7 @@
 
 
-<div class="author-header-content"> 
-   {{!-- <div class="author-list-item"> --}}
+<div class="author-card"> 
+   <div class="author-info"> 
         {{#if profile_image}}
             <a href="{{url}}"> <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}"/> </a>
         {{else}}
@@ -12,6 +12,6 @@
                 <i>{{bio}}<i>
             {{/if}}
                 ({{plural count.posts empty='No posts' singular='% post' plural='% posts'}})   
-   {{!-- </div> --}}
+   </div>
 </div>
         
