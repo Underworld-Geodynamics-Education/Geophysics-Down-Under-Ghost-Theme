@@ -17,6 +17,10 @@
                 {{/if}}
                 <div class="author-stats">
                     {{plural ../../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+                    Posts: {{posts}}
+                    Name: {{name}}
+                    Count: {{count.posts}}
+                    
                 </div>
                 {{#if website}}
                     <span class="author-social-link"><a href="{{website}}" target="_blank" rel="noopener">Website</a></span>
