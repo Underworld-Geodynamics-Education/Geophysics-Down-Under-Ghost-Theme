@@ -48,16 +48,16 @@ into the {body} of the default.hbs template --}}
 
             <section class="post-full-content">
                 <div class="post-content"> 
-                      {{#get 'tags'    limit='all' include='count.posts' order='count.posts desc'}}
-                                {{#foreach tags}}
-                                    {{tags}}
-                                {{/foreach}}
+                      {{ >content }}
+                      <h2> Tags </h2>
+                      {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+                           {{#foreach tags}}
+                               Tag:       {{tags}}
+                           {{/foreach}}
                       {{/get}}
                 </div> 
             </section>
-
         </article>
-
     </div>
 </main>
 
