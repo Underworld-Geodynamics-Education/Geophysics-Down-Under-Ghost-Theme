@@ -55,7 +55,7 @@ into the {body} of the default.hbs template --}}
                                Posts: {{count.posts}}
                                Name: {{name}}
                                
-                              {{#get "posts" filter="primary_tag:{{name}}" include="authors,tags", limit="all"}}
+                              {{#get "posts" filter="primary_tag:{{name}}" include="authors,tags" limit="all"}}
                                    <ol> 
                                     {{#foreach posts}}
                                       <li> <a href="{{url}}">{{title}}</a>, {{tags}}, {{primary_tag}} </li>
