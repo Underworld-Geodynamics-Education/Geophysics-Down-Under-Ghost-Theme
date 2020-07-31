@@ -54,6 +54,7 @@ into the {body} of the default.hbs template --}}
                                <h3> {{name}} </h3>
                                Posts: {{count.posts}}
                                Name: {{name}}
+                               Desc: {{description}}
                                
                               {{#get "posts" filter="primary_tag:{{name}}" include="authors,tags" limit="all"}}
                                    <ol> 
