@@ -71,7 +71,7 @@ into the {body} of the default.hbs template --}}
                       {{#get "posts" include="authors,tags" limit="all"}}
                            <dl> 
                               {{#foreach posts}}
-                                <dt> {{date}} </dt>
+                                <dt> <b> {{date}} </b> </dt> &emdash;
                                 <dd> <a href="{{url}}">{{title}}</a>, <i> {{tags}} </i>, {{authors}} </dd>
                               {{/foreach}} 
                            </dl>
