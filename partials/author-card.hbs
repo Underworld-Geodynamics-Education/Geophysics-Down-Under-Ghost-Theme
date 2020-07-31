@@ -3,7 +3,7 @@
 <div class="author-card"> 
    <div class="author-info"> 
         {{#if profile_image}}
-            <a href="{{url}}"> <img src="{{profile_image}}" alt="{{name}} float="left"/> </a>
+            <a href="{{url}}"> <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}  /> </a>
         {{else}}
             <a href="{{url}}"> <span class="author-profile-image">{{> "icons/avatar"}}</span> </a>
         {{/if}}
