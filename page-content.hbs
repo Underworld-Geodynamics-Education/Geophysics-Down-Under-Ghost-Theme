@@ -54,12 +54,11 @@ into the {body} of the default.hbs template --}}
                                <h3> {{name}} </h3>
                                Posts: {{count.posts}}
                                Name: {{name}}
-                               Slug: {{name.slug}}
                                
-                              {{#get "posts" filter="primary-tag:{{name}}" limit="all"}}
+                              {{#get "posts" filter="tag:{{name}}" limit="all"}}
                                    <ol> 
                                     {{#foreach posts}}
-                                      <li> <a href="{{url}}">{{title}}</a> </li>
+                                      <li> <a href="{{url}}">{{title}}</a>, {{tags}}, {{primary_tag}} </li>
                                     {{/foreach}} 
                                     </ol>
                               {{/get}}
