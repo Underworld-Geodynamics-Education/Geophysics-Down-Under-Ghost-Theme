@@ -1,7 +1,7 @@
 
 
 <div class="author-card"> 
-   {{!-- <div class="author-list-item"> --}
+   {{!-- <div class="author-list-item"> --}}
         {{#if profile_image}}
             <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}"/>
         {{else}}
@@ -13,7 +13,7 @@
             {{/if}}
             {{!-- <div class="author-meta"> --}}
                 {{#if location}}
-                    <div class="author-location">{{location}}</div>
+                     based in {{location}}
                 {{/if}}
                 <div class="author-stats">
                     {{plural count.posts empty='No posts' singular='% post' plural='% posts'}}     
