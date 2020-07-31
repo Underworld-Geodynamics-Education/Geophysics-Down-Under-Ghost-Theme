@@ -11,12 +11,12 @@
             {{#if bio}}
                 <i class="author-bio">{{bio}}<i>
             {{/if}}
-            <div class="author-meta">
+            {{!-- <div class="author-meta"> --}}
                 {{#if location}}
                     <div class="author-location">{{location}}</div>
                 {{/if}}
                 <div class="author-stats">
-                    {{plural posts.count empty='No posts' singular='% post' plural='% posts'}}
+                    {{plural ../posts.count empty='No posts' singular='% post' plural='% posts'}}
                 </div>
                 {{#if website}}
                     <span class="author-social-link"><a href="{{website}}" target="_blank" rel="noopener">Website</a></span>
@@ -27,7 +27,7 @@
                 {{#if facebook}}
                     <span class="author-social-link"><a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a></span>
                 {{/if}}
-            </div>
+           {{!-- </div> --}}
        </div> 
    </div>
 </div>
