@@ -47,7 +47,8 @@ into the {body} of the default.hbs template --}}
             {{/if}}
 
             <section class="post-full-content">
-                <div class="post-content"> 
+                <div class="post-content">
+                    {{content}}
                       {{#get 'authors' limit='all' include='count.posts' order='name asc'}}
                           <div class="post-feed">
                                 {{#foreach authors}}
