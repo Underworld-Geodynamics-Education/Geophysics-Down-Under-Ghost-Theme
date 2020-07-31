@@ -53,10 +53,11 @@ into the {body} of the default.hbs template --}}
                            {{#foreach tags}}
                                <h3> {{name}} </h3>
                               {{#get "posts" filter="tags:{{name}}" limit="all"}}
-
+                                   <ol> 
                                     {{#foreach posts}}
-                                      <p/>Post: {{title}} 
+                                       <li> {{title}} </li>
                                     {{/foreach}} 
+                                    </ol>
                               {{/get}}
                            {{/foreach}}
                       {{/get}}
