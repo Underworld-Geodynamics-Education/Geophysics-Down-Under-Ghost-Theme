@@ -1,12 +1,12 @@
 
 
 <div class="author-card"> 
+   <div class="author-list-item"> 
         {{#if profile_image}}
             <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
         {{else}}
             <span class="author-profile-image">{{> "icons/avatar"}}</span>
         {{/if}}
-        <div class="author-card"> 
             {{name}} 
             {{#if bio}}
                 <i class="author-bio">{{bio}}<i>
@@ -29,6 +29,7 @@
                 {{/if}}
             </div>
        </div> 
+   </div>
 </div>
         
 {{!--  
