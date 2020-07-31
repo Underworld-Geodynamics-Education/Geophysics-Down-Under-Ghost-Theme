@@ -3,27 +3,15 @@
 <div class="author-card"> 
    {{!-- <div class="author-list-item"> --}}
         {{#if profile_image}}
-            <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}"/>
+            <a href="{{url}}"> <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}"/> </a>
         {{else}}
-            <span class="author-profile-image">{{> "icons/avatar"}}</span>
+            <a href="{{url}}"> <span class="author-profile-image">{{> "icons/avatar"}}</span> </a>
         {{/if}}
             <a href="{{url}}">{{name}}</a>
             {{#if bio}}
                 <i>{{bio}}<i>
             {{/if}}
-               {{!-- <div class="author-stats"> --}}
                 ({{plural count.posts empty='No posts' singular='% post' plural='% posts'}})   
-               {{!--  </div> --}}
-                {{#if website}}
-                    <span class="author-social-link"><a href="{{website}}" target="_blank" rel="noopener">Website</a></span>
-                {{/if}}
-                {{#if twitter}}
-                    <span class="author-social-link"><a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a></span>
-                {{/if}}
-                {{#if facebook}}
-                    <span class="author-social-link"><a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a></span>
-                {{/if}}
-           {{!-- </div> --}}
    {{!-- </div> --}}
 </div>
         
