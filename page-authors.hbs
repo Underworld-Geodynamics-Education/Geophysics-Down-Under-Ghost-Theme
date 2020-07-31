@@ -47,16 +47,16 @@ into the {body} of the default.hbs template --}}
             {{/if}}
 
             <section class="post-full-content">
-                <div class="post-content">
+                <div class="post-content"> 
                       {{#get 'authors' limit='all' include='count.posts' order='count.posts desc'}}
-                          <div class="l-posts-container">
+                          {{!-- <div class="l-posts-container"> --}}
                                 {{#foreach authors}}
                                   {{!-- The tag below includes the markup for each author - partials/author-card.hbs --}}
                                   {{> "author-card"}}
                                 {{/foreach}}
-                          </div>
+                          {{!-- </div> --}}
                       {{/get}}
-                </div>
+                </div> 
             </section>
 
         </article>
@@ -78,37 +78,4 @@ into the {body} of the default.hbs template --}}
 
 
 
-<div class="main-wrap">
-  <main>
-    <div class="l-wrapper">
-      <div class="l-content">
-        {{!-- Everything inside the #post tags pulls data from the page --}}
-        {{#post}}
-        <section class="m-heading" data-aos="fade">
-          <h1 class="m-heading__title">{{title}}</h1>
-          {{#if custom_excerpt}}
-            <p class="m-heading__description">
-              {{custom_excerpt}}
-            </p>
-          {{/if}}
-        </section>
-        {{/post}}
-        {{#get 'authors' limit='all' include='count.posts' order='count.posts desc'}}
-          <div class="l-posts-container">
-            {{#foreach authors}}
-              {{!-- The tag below includes the markup for each author - partials/author-card.hbs --}}
-              {{> "author-card"}}
-            {{/foreach}}
-          </div>
-        {{/get}}
-      </div>
-    </div>
-  </main>
-</div>
-
-
-
-
-
-{{!-- --}}
 
