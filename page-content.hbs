@@ -55,7 +55,7 @@ into the {body} of the default.hbs template --}}
                               {{#get "posts" filter="primary-tag:{{primary_tag.slug}}" limit="all"}}
                                    <ol> 
                                     {{#foreach posts}}
-                                       <li> {{title}} </li>
+                                      <li> <a href="{{url}}">{{title}}</a> </li>
                                     {{/foreach}} 
                                     </ol>
                               {{/get}}
