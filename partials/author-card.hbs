@@ -7,17 +7,13 @@
         {{else}}
             <span class="author-profile-image">{{> "icons/avatar"}}</span>
         {{/if}}
-            {{name}} 
+            <a href="{{url}}">{{name}}</a>
             {{#if bio}}
-                <i class="author-bio">{{bio}}<i>
+                <i>{{bio}}<i>
             {{/if}}
-            {{!-- <div class="author-meta"> --}}
-                {{#if location}}
-                     based in {{location}}
-                {{/if}}
-                <div class="author-stats">
-                    {{plural count.posts empty='No posts' singular='% post' plural='% posts'}}     
-                </div>
+               {{!-- <div class="author-stats"> --}}
+                    ({{plural count.posts empty='No posts' singular='% post' plural='% posts'}})   
+               {{!--  </div> --}}
                 {{#if website}}
                     <span class="author-social-link"><a href="{{website}}" target="_blank" rel="noopener">Website</a></span>
                 {{/if}}
