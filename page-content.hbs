@@ -52,7 +52,7 @@ into the {body} of the default.hbs template --}}
                       <h2> Tags </h2>
                       {{#get 'tags' limit='all' include='count.posts,tags' order='count.posts desc'}}
                            {{#foreach tags}}
-                               Tag:  {{tags}}
+                               Tag:  {{tags}} / {{name}}
                            {{/foreach}}
                       {{/get}}
                 </div> 
