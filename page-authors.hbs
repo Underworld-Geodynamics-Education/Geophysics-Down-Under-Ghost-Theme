@@ -48,7 +48,7 @@ into the {body} of the default.hbs template --}}
 
             <section class="post-full-content">
                 <div class="post-content"> 
-                      {{#get 'authors' limit='all' include='count.posts' order='name desc'}}
+                      {{#get 'authors' limit='all' include='count.posts' order='name asc'}}
                           <div class="post-feed">
                                 {{#foreach authors}}
                                   {{!-- The tag below includes the markup for each author - partials/author-card.hbs --}}
