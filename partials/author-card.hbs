@@ -3,7 +3,7 @@
 <div class="author-card"> 
    <div class="author-list-item"> 
         {{#if profile_image}}
-            <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+            <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" float="left" />
         {{else}}
             <span class="author-profile-image">{{> "icons/avatar"}}</span>
         {{/if}}
@@ -16,7 +16,7 @@
                     <div class="author-location">{{location}}</div>
                 {{/if}}
                 <div class="author-stats">
-                    {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+                    {{plural posts.count empty='No posts' singular='% post' plural='% posts'}}
                 </div>
                 {{#if website}}
                     <span class="author-social-link"><a href="{{website}}" target="_blank" rel="noopener">Website</a></span>
