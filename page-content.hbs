@@ -69,11 +69,12 @@ into the {body} of the default.hbs template --}}
                       --}}
                       
                       {{#get "posts" include="authors,tags" limit="all"}}
-                           <ul> 
+                           <dl> 
                               {{#foreach posts}}
-                                <li> {{date}} - <a href="{{url}}">{{title}}</a>, {{tags}}, {{authors}} <\li>
+                                <dt> {{date}} </dt>
+                                <dd> <a href="{{url}}">{{title}}</a>, <i> {{tags}} </i>, {{authors}} </dd>
                               {{/foreach}} 
-                           </ul>
+                           </dl>
                       {{/get}}
                       
                 </div> 
