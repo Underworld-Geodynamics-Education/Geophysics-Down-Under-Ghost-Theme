@@ -1624,10 +1624,12 @@ Usage (In Ghost editor):
 
 .author-card .author-profile-image {
     flex: 0 0 60px;
+    flex-direction: row;
     margin: 0;
     width: 60px;
     height: 60px;
     border: none;
+    float: left;
 }
 
 .basic-info .avatar-wrapper {
