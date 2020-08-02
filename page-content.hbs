@@ -75,7 +75,7 @@ into the {body} of the default.hbs template --}}
                                  <li>                           
                                  <a href="{{url}}">{{title}}</a>,        
                                  by {{authors}}. 
-                                 {{if tags}} [{{tags}}]  {{/if}}
+                                 {{#if tags}} [{{tags}}]  {{/if}}
                                 </li>
                               {{/foreach}} 
                               </ul>
