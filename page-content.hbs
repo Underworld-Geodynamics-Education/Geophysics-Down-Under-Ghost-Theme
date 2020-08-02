@@ -74,8 +74,8 @@ into the {body} of the default.hbs template --}}
                               {{#foreach posts}}
                                  <li>                           
                                  <a href="{{url}}">{{title}}</a>,        
-                                 by {{authors}}. 
-                                 {{#if tags}} [{{tags}}]  {{/if}}
+                                 by {{authors}} on {{date}}. 
+                                 {{#if tags}} [{{tags}}].  {{/if}}
                                 </li>
                               {{/foreach}} 
                               </ul>
