@@ -73,7 +73,9 @@ into the {body} of the default.hbs template --}}
                       <h2> 2020 </h2>
                       
                       {{#get "posts" filter='published_at:>="2020-01-01 00:00:00"+published_at:<"2020-12-31 23:59:59"' include="authors,tags" limit="all"}}
+                        {{title}}, {{primary_tag.name}}, {{tags}}
                       
+                      {{/get}}
                       - - - 
                       
                       {{#get "posts" include="authors,tags" limit="all"}}
