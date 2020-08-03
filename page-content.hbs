@@ -49,41 +49,30 @@ into the {body} of the default.hbs template --}}
             <section class="post-full-content">
                 <div class="post-content"> 
                       {{content}}
-                      
-                      {{!--
-                      {{#get 'tags' limit='all' include='count.posts,tags' order='count.posts desc' as |ptags|}}
-                           {{#foreach ptags}}
-                               <h3> {{name}} </h3>
-                               Posts: {{count.posts}}
-                               Name: {{name}}
-                               Desc: {{description}}
-                               Primary Tag: {{primary_tag.name}}
-                               
-                               
-                              {{#get "posts" filter="tag:{{name}}" include="authors,tags" limit="all" as |articles pages|}}
-                                   <ol> 
-                                    {{#foreach articles}}
-                                      <li> <a href="{{url}}">{{title}}</a>, {{tags}}, {{primary_tag}} </li>
-                                    {{/foreach}} 
-                                    </ol>
-                              {{/get}}
-                           {{/foreach}}
-                      {{/get}} --}}
-                      
-                      <h2> 2020 </h2>
+                     
+                                         
+                      <h2> <a href="{{2020}}">2020</a> </h2>
                       {{#get "posts" filter="published_at:>='2020-01-01 00:00:00'+published_at:<'2020-12-31 23:59:59'" include="count.posts, authors,tags" limit="all"}}
-                          <small>
-                              <ul>
+                          <small> <ul>
                                   {{#foreach posts}}
-                                     <li>                           
-                                     <a href="{{url}}">{{title}}</a>,        
-                                     by {{authors}} on {{date}}. 
-                                     {{#if tags}} [{{tags}}].  {{/if}}
-                                    </li>
+                                     <li>  <a href="{{url}}">{{title}}</a>, by {{authors}} on {{date}}. 
+                                     {{#if tags}} [{{tags}}].  {{/if}} </li>
                                   {{/foreach}} 
-                              </ul>
-                           </small>   
+                              </ul> </small>   
                        {{/get}}
+                       
+                      {{#get "posts" filter="published_at:>='2019-01-01 00:00:00'+published_at:<'2019-12-31 23:59:59'" include="count.posts, authors,tags" limit="all"}}
+                       <h2> <a href="{{2019}}">2019</a> </h2>
+                         Posts: {{count.posts}}
+                         
+                         <small> <ul>
+                                  {{#foreach posts}}
+                                     <li>  <a href="{{url}}">{{title}}</a>, by {{authors}} on {{date}}. 
+                                     {{#if tags}} [{{tags}}].  {{/if}} </li>
+                                  {{/foreach}} 
+                              </ul> </small>   
+                       {{/get}}
+                     
                   
                       <h2> Earlier </h2>
                                             
