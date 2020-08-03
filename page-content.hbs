@@ -56,7 +56,7 @@ into the {body} of the default.hbs template --}}
                                Posts: {{count.posts}}
                                Name: {{name}}
                                Desc: {{description}}
-                               Primary Tag: {{primary_tag}}
+                               Primary Tag: {{primary_tag.name}}
                                
                                
                               {{#get "posts" filter="tag:{{name}}" include="authors,tags" limit="all"}}
