@@ -56,8 +56,12 @@ into the {body} of the default.hbs template --}}
                                Posts: {{count.posts}}
                                Name: {{name}}
                                Desc: {{description}}
+                               Primary Tag: {{primary_tag}}
+                               
                                
                               {{#get "posts" filter="primary_tag.name:{{name}}" include="authors,tags" limit="all"}}
+                                   Tag: {{name}}
+                                   
                                    <ol> 
                                     {{#foreach posts}}
                                       <li> <a href="{{url}}">{{title}}</a>, {{tags}}, {{primary_tag}} </li>
