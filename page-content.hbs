@@ -59,7 +59,7 @@ into the {body} of the default.hbs template --}}
                                Primary Tag: {{primary_tag}}
                                
                                
-                              {{#get "posts" filter="primary_tag.name:{{name}}" include="authors,tags" limit="all"}}
+                              {{#get "posts" filter="tag:{{name}}" include="authors,tags" limit="all"}}
                                    Tag: {{name}}
                                    
                                    <ol> 
