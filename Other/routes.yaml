@@ -1,1 +1,24 @@
+routes:
+  /2022/:
+    controller: channel
+    filter: published_at:>='2022-01-01 00:00:00'+published_at:<'2022-12-31 23:59:59'
+  /2021/:
+    controller: channel
+    filter: published_at:>='2021-01-01 00:00:00'+published_at:<'2021-12-31 23:59:59'
+  /2020/:
+    controller: channel
+    filter: published_at:>='2020-01-01 00:00:00'+published_at:<'2020-12-31 23:59:59'
+  /Early/:
+    controller: channel
+    filter: published_at:<='2020-01-01 00:00:00'
+
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
 
