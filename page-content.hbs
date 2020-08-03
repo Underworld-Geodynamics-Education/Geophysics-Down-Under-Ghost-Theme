@@ -50,8 +50,8 @@ into the {body} of the default.hbs template --}}
                 <div class="post-content"> 
                       {{content}}
                       
-                      {{#get 'tags' limit='all' include='count.posts,tags' order='count.posts desc'}}
-                           {{#foreach tags}}
+                      {{#get 'tags' limit='all' include='count.posts,tags' order='count.posts desc' as |ptags|}}
+                           {{#foreach ptags}}
                                <h3> {{name}} </h3>
                                Posts: {{count.posts}}
                                Name: {{name}}
@@ -59,11 +59,9 @@ into the {body} of the default.hbs template --}}
                                Primary Tag: {{primary_tag.name}}
                                
                                
-                              {{#get "posts" filter="tag:{{name}}" include="authors,tags" limit="all"}}
-                                   Tag: {{name}}
-                                   
+                              {{#get "posts" filter="tag:{{name}}" include="authors,tags" limit="all" as |articles pages|}}
                                    <ol> 
-                                    {{#foreach posts}}
+                                    {{#foreach articles}}
                                       <li> <a href="{{url}}">{{title}}</a>, {{tags}}, {{primary_tag}} </li>
                                     {{/foreach}} 
                                     </ol>
