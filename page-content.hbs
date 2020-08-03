@@ -49,7 +49,7 @@ into the {body} of the default.hbs template --}}
             <section class="post-full-content">
                 <div class="post-content"> 
                       {{content}}
-                      {{!--
+                      
                       {{#get 'tags' limit='all' include='count.posts,tags' order='count.posts desc'}}
                            {{#foreach tags}}
                                <h3> {{name}} </h3>
@@ -66,7 +66,8 @@ into the {body} of the default.hbs template --}}
                               {{/get}}
                            {{/foreach}}
                       {{/get}}
-                      --}}
+                      
+                      - - - 
                       
                       {{#get "posts" include="authors,tags" limit="all"}}
                             <small>
