@@ -81,7 +81,7 @@ into the {body} of the default.hbs template --}}
                       
                       <h2> Earlier </h2>
                                             
-                      {{#get "posts" filter='published_at:<="2020-01-01 00:00:00"' include="count.posts, authors,tags" limit="all"}}
+                      {{#get "posts" filter='published_at:<"2020-01-01"' include="count.posts, authors,tags" limit="all"}}
                         Count: {{count.posts}}
                         {{#foreach posts}}
                             POST 2020: {{title}}, {{primary_tag.name}}, {{tags}}
