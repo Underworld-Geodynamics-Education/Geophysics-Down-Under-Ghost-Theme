@@ -1,3 +1,4 @@
+<!--
 {{#if @labs.members}}
   <h2><span id="cove-count"></span> Comments</h2>
 
@@ -30,3 +31,19 @@
   }
   </script>
 {{/if}}
+-->
+
+<div id='discourse-comments'></div>
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'https://forums.geophysics-down-under.geoscience.education/',
+                     discourseEmbedUrl: '{{url absolute="true"}}' };
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+
+
