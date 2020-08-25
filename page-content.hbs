@@ -53,12 +53,17 @@ into the {body} of the default.hbs template --}}
                        {{#get "posts" filter="published_at:>='2021-01-01 00:00:00'+published_at:<'2021-12-31 23:59:59'" include="count.posts, authors,tags" limit="all"}}
                        {{#if posts}}
                           <h2> <a href="2021">2021</a> </h2>
-                            <small> <ul>
-                                  {{#foreach posts}}
-                                     <li>  <a href="{{url}}">{{title}}</a>, by {{authors}} on {{date}}. 
-                                     {{#if tags}} [{{tags}}].  {{/if}} </li>
-                                  {{/foreach}} 
-                              </ul> </small>   
+                             <ul>
+                                    {{#foreach posts}}
+                                    <li>
+                                      <small> 
+                                      <a href="{{url}}">{{title}}</a>, by {{authors}} on {{date}}. 
+                                        {{#if tags}} [{{tags}}].  {{/if}} 
+                                      </small>
+                                    </li>
+                                    {{/foreach}} 
+                                 </small>   
+                            </ul>  
                        {{/if}}
                        {{/get}}
    
@@ -66,12 +71,17 @@ into the {body} of the default.hbs template --}}
                       {{#get "posts" filter="published_at:>='2020-01-01 00:00:00'+published_at:<'2020-12-31 23:59:59'" include="count.posts, authors,tags" limit="all"}}
                        {{#if posts}}
                           <h2> <a href="/2020/">2020</a> </h2>
-                            <small> <ul>
-                                  {{#foreach posts}}
-                                     <li>  <a href="{{url}}">{{title}}</a>, by {{authors}} on {{date}}. 
-                                     {{#if tags}} [{{tags}}].  {{/if}} </li>
-                                  {{/foreach}} 
-                              </ul> </small>   
+                             <ul>
+                                    {{#foreach posts}}
+                                    <li>
+                                      <small> 
+                                      <a href="{{url}}">{{title}}</a>, by {{authors}} on {{date}}. 
+                                        {{#if tags}} [{{tags}}].  {{/if}} 
+                                      </small>
+                                    </li>
+                                    {{/foreach}} 
+                                 </small>   
+                            </ul>   
                        {{/if}}
                        {{/get}}
                        
@@ -79,14 +89,19 @@ into the {body} of the default.hbs template --}}
                       {{#get "posts" filter="published_at:<'2020-01-01 00:00:00'" include="count.posts, authors,tags" limit="all"}}
                        {{#if posts}}
                           <h2> <a href="/Early/">Earlier</a> </h2>
-                            <small> <ul>
-                                  {{#foreach posts}}
-                                     <li>  <a href="{{url}}">{{title}}</a>, by {{authors}} on {{date}}. 
-                                     {{#if tags}} [{{tags}}].  {{/if}} </li>
-                                  {{/foreach}} 
-                              </ul> </small>   
-                       {{/if}}
-                       {{/get}}
+                             <ul>
+                                    {{#foreach posts}}
+                                    <li>
+                                      <small> 
+                                      <a href="{{url}}">{{title}}</a>, by {{authors}} on {{date}}. 
+                                        {{#if tags}} [{{tags}}].  {{/if}} 
+                                      </small>
+                                    </li>
+                                    {{/foreach}} 
+                                 </small>   
+                            </ul>                      
+                          {{/if}}
+                      {{/get}}
 
                       
                 </div> 
