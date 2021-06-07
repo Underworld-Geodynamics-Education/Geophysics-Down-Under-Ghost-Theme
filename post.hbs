@@ -1,3 +1,28 @@
+<style>
+    /* This gets Google to fall into place */
+    .social {
+        font-size: 1px;
+    }
+
+    /* This gets Facebook to fall into place */
+    .social iframe {
+        vertical-align: bottom;
+    }
+
+    /* Set an optional width for your button wrappers */
+    .social span {
+        display: inline-block;
+        width: 110px;
+    }
+
+    /* Adjust the widths individually if you like */
+    .social .google {
+        width: 75px;
+    }
+
+</style>
+
+
 {{!< default}}
 
 
@@ -112,12 +137,11 @@ into the {body} of the default.hbs template --}}
                     
                     <hr>
                     <h3> Share </h3>
-                      <div class="social-sharing">
+                      <div class="social">
                         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a>                    
                         <div class="fb-share-button" 
                         data-href="https://www.geo-down-under.org.au{{url}}" 
-                        data-layout="button_count"
-                        style="display: inline-block; vertical-align: middle;">
+                        data-layout="button_count">
                         </div>
                       </div>
                 </div>
