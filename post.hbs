@@ -1,5 +1,16 @@
 {{!< default}}
 
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
@@ -106,55 +117,24 @@ into the {body} of the default.hbs template --}}
             <section class="post-full-content">
                 <div class="post-content">
                     {{content}}
+                    
+                    <hr>
+                    <h3> Share </h3>
+                    
+                    URL: "{{url}}"
+                    
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            
+                    <div class="fb-share-button" 
+                    data-href="https://www.your-domain.com/your-page.html" 
+                    data-layout="button_count">
+                    </div>
                 </div>
             </section>
             
-            <hr>
-            <h3> Bookmark or share this post </h3>
-            
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            
-            
-                <ul class="ap10__menu">
-      <li class="ap10__menu-item  ap10__menu-item--twitter">
-        <button class="js-sharing-popup-twitter" data-share-text="How to add the Tweet button to your website" data-share-url="https://help.twitter.com/en/using-twitter/add-twitter-share-button" data-share-via="" data-share-hashtags="" data-share-related="">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" class="twtr-icon  twtr-color-fill--blue-dark  has-hover"> 
- <path opacity="0" d="M0 0h24v24H0z" /> 
- <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" /> 
-</svg>
-        </button>
-      </li>
-      <li class="ap10__menu-item  ap10__menu-item--facebook">
-        <button class="js-sharing-popup-facebook" data-share-url="https://help.twitter.com/en/using-twitter/add-twitter-share-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" class="twtr-icon  twtr-color-fill--blue-dark  has-hover"> 
- <path d="M16.75,9H13.5V7a1,1,0,0,1,1-1h2V3H14a4,4,0,0,0-4,4V9H8v3h2v9h3.5V12H16Z" /> 
-</svg>
-        </button>
-      </li>
-      <li class="ap10__menu-item  ap10__menu-item--linkedin">
-        <button class="js-sharing-popup-linkedin" data-share-url="https://help.twitter.com/en/using-twitter/add-twitter-share-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" class="twtr-icon  twtr-color-fill--blue-dark  has-hover">
- <rect height="11" width="4" x="3" y="9" />
- <circle cx="5" cy="5" r="2" />
- <path d="M16.5,8.25A4.47251,4.47251,0,0,0,13,9.95343V9H9V20h4V13a2,2,0,0,1,4,0v7h4V12.75A4.5,4.5,0,0,0,16.5,8.25Z" />
-</svg>
-        </button>
-      </li>
-      <li class="ap10__menu-item  ap10__menu-item--link">
-        <button class="js-sharing-copy-link" data-copy-message="Press #{key} to copy link." data-copy-label="Link copied to clipboard">
-          <span><svg xmlns="http://www.w3.org/2000/svg" width="56" height="72" viewbox="0 0 56 72" class="twtr-icon  twtr-color-fill--blue-dark  has-hover">
- <path d="M29.518 12.25l-8.705 8.704a13.624 13.624 0 0 0-2.881 4.26 13.617 13.617 0 0 0-1.128 5.377c0 5.48 3.076 8.778 4.01 9.77 2.346 2.494 7.014 3.983 7.416 3.674.637-.49 2.665-3.002.174-5.764-.452-.502-3.605-.852-5.154-4.667-.836-2.059-.753-4.129.076-6.055a7.8 7.8 0 0 1 1.647-2.434l8.705-8.704c3.057-3.057 8.032-3.057 11.089 0 3.057 3.057 3.057 8.032 0 11.089l-4.175 4.174a17.549 17.549 0 0 1 2.37 5.947l5.963-5.962c5.35-5.351 5.35-14.057 0-19.408C43.574 6.9 34.869 6.9 29.518 12.25z" />
- <path d="M26.357 59.768l9.01-9.01a13.624 13.624 0 0 0 2.881-4.26 13.617 13.617 0 0 0 1.128-5.377c0-5.48-3.076-8.778-4.01-9.77-2.346-2.494-7.014-3.983-7.416-3.674-.637.49-2.665 3.002-.174 5.764.452.502 3.605.852 5.154 4.667.836 2.059.753 4.129-.076 6.055a7.8 7.8 0 0 1-1.647 2.434l-9.01 9.01c-3.057 3.057-8.032 3.057-11.089 0-3.057-3.057-3.057-8.032 0-11.089l4.479-4.479a17.549 17.549 0 0 1-2.37-5.947L6.95 40.36c-5.35 5.351-5.35 14.057 0 19.408 5.351 5.35 14.057 5.35 19.407 0z" />
-</svg></span>
-        </button>
-      </li>
-      <li class="ap10__menu-item  ap10__menu-item--bookmark  twtr-hidden--xs  twtr-hidden--sm  twtr-hidden--md  twtr-hidden--md2">
-        <button class="js-sharing-bookmark" data-copy-label="Press #{key} to bookmark this page"><svg width="14px" height="20px" viewbox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="twtr-icon  twtr-color-fill--blue-dark  has-hover"> 
- <path d="M14,1.16144891 C14,0.520724744 13.4427222,0 12.7582778,0 L1.24211111,0 C0.557277778,0 0,0.520724744 0,1.16144891 L0,19.2726337 C0,19.5744504 0.1995,19.8449945 0.501277778,19.9522668 C0.803444444,20.0599026 1.14488889,19.9817212 1.35916667,19.7559041 L7,13.8217511 L12.6408333,19.7559041 C12.8551111,19.9817212 13.1965556,20.0599026 13.4987222,19.9522668 C13.8005,19.8449945 14,19.5744504 14,19.2726337 L14,1.16144891 Z"></path> 
-</svg></button>
-      </li>
-    </ul>
-            
+
+     
             {{!-- If you want to embed comments, this is a good place to do it! --}}
             <section class="post-full-comments">
                 {{> comments}}
