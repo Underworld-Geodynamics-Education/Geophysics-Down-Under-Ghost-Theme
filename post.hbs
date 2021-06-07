@@ -54,6 +54,14 @@ into the {body} of the default.hbs template --}}
                 {{#if custom_excerpt}}
                 <p class="post-full-custom-excerpt">{{custom_excerpt}}</p>
                 {{/if}}
+                
+                      <div class="social">
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a>                    
+                        <div class="fb-share-button" 
+                        data-href="https://www.geo-down-under.org.au{{url}}" 
+                        data-layout="button_count">
+                        </div>
+                      </div>
 
                 <div class="post-full-byline">
 
@@ -130,14 +138,6 @@ into the {body} of the default.hbs template --}}
             <section class="post-full-content">
                 <div class="post-content">
                     {{content}}
-                    <hr>
-                      <div class="social">
-                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a>                    
-                        <div class="fb-share-button" 
-                        data-href="https://www.geo-down-under.org.au{{url}}" 
-                        data-layout="button_count">
-                        </div>
-                      </div>
                 </div>
             </section>
       
