@@ -55,15 +55,7 @@ into the {body} of the default.hbs template --}}
                 <p class="post-full-custom-excerpt">{{custom_excerpt}}</p>
                 {{/if}}
                 
-                <hr>
-                <div class="social" style="text-align: center;">
-                    <span class="Facebook">
-                        <div class="fb-share-button" data-href="https://www.geo-down-under.org.au{{url}}"  data-layout="button_count">  </div> 
-                    </span>
-                    <span class="twitter">
-                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a>                    
-                    </span>
-                </div>
+
                 
                 <div class="post-full-byline">
 
@@ -100,11 +92,13 @@ into the {body} of the default.hbs template --}}
                                 {{else}}
                                 <a href="{{url}}" class="author-avatar author-profile-image">{{> "icons/avatar"}}</a>
                                 {{/if}}
+                                
+                                
 
                             </li>
                             {{/foreach}}
                         </ul>
-
+    
                         <section class="post-full-byline-meta">
                             <h4 class="author-name">{{authors}}</h4>
                             <div class="byline-meta-content">
@@ -136,11 +130,30 @@ into the {body} of the default.hbs template --}}
                 />
             </figure>
             {{/if}}
+            
+                         <div class="social" style="text-align: center;">
+                            <span class="Facebook">
+                                <div class="fb-share-button" data-href="https://www.geo-down-under.org.au{{url}}"  data-layout="button_count">  </div> 
+                            </span>
+                            <span class="twitter">
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a>                    
+                            </span>
+                        </div>
 
             <section class="post-full-content">
                 <div class="post-content">
                     {{content}}
                 </div>
+                
+                <hr>
+                         <div class="social" style="text-align: center;">
+                            <span class="Facebook">
+                                <div class="fb-share-button" data-href="https://www.geo-down-under.org.au{{url}}"  data-layout="button_count">  </div> 
+                            </span>
+                            <span class="twitter">
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a>                    
+                            </span>
+                        </div>
             </section>
       
             {{!-- If you want to embed comments, this is a good place to do it! --}}
