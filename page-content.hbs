@@ -50,6 +50,24 @@ into the {body} of the default.hbs template --}}
                 <div class="post-content"> 
                       {{content}}
                       
+                       {{#get "posts" filter="published_at:>='2022-01-01 00:00:00'+published_at:<'2022-12-31 23:59:59'" include="count.posts,authors,tags" limit="all"}}
+                       {{#if posts}}
+                          <h2> <a href="/2022/">2022</a> </h2>
+                             <ul>
+                                    {{#foreach posts}}
+                                    <li>
+                                      <small> 
+                                      <a href="{{url}}">{{title}}</a>, by {{authors}} on {{date}}. 
+                                        {{#if tags}} [{{tags}}].  {{/if}} 
+                                      </small>
+                                    </li>
+                                    {{/foreach}} 
+                                 </small>   
+                            </ul>  
+                       {{/if}}
+                       {{/get}}
+
+                      
                        {{#get "posts" filter="published_at:>='2021-01-01 00:00:00'+published_at:<'2021-12-31 23:59:59'" include="count.posts,authors,tags" limit="all"}}
                        {{#if posts}}
                           <h2> <a href="/2021/">2021</a> </h2>
