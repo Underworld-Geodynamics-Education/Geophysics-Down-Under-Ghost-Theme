@@ -47,34 +47,11 @@ into the {body} of the default.hbs template --}}
                 </div>
             </section>
             
-            Test the topic embed:
             
-            <d-topics-list discourse-url="https://forum.geo-down-under.org.au" template="complete" allow-create="True"></d-topics-list>
+            <d-topics-list discourse-url="https://forum.geo-down-under.org.au" template="complete" allow-create="True" style="width:100%"></d-topics-list>
             
             <script src="https://forum.geo-down-under.org.au/javascripts/embed-topics.js"></script>
             
-            
-            <hr>
-            
-            
-            <!-- -->
-            
-            Subscribe to the <a href="https://forum.geo-down-under.org.au/signup"> geo-down-under forum </a> to join the conversation. 
-
-            <div id='discourse-comments'></div>
-
-            <script type="text/javascript">
-             if (window.location.pathname.indexOf('/p/') < 0) {
-                  DiscourseEmbed = { discourseUrl: 'https://forum.geo-down-under.org.au/',
-                                     discourseEmbedUrl: '{{url absolute="true"}}' };
-                  (function() {
-                    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-                    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-                  })();
-              }
-            </script>
-
         </article>
 
     </div>
